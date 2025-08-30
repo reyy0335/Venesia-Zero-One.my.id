@@ -1,0 +1,213 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header dengan background gambar + animasi fade in */
+header {
+  height: 250px;
+  background: url("https://images.unsplash.com/photo-1606112219348-204d7d8b94ee") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px black;
+}
+
+header p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 5px black;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigasi */
+nav {
+  background: #222;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 18px;
+}
+
+nav ul li a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00ffcc;
+}
+
+/* Section */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #1e90ff;
+  font-size: 1.8rem;
+}
+
+/* Daftar anggota jadi card */
+#anggota ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#anggota ul li {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#anggota ul li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+}
+
+/* Tombol join */
+#kontak a {
+  display: inline-block;
+  background: linear-gradient(45deg, #1e90ff, #00ffcc);
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#kontak a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,255,200,0.7);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+/* Event Section */
+#event {
+  background: url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b5") center/cover no-repeat;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+#event::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+#event h2 {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00ffcc;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff; }
+  to { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; }
+}
+
+.event-box {
+  position: relative;
+  background: rgba(30,30,30,0.8);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.event-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1e90ff;
+}
+
+.event-box p {
+  margin-bottom: 15px;
+}
+
+.event-box ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.event-box ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.btn-join {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  padding: 12px 28px;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-join:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(255,140,0,0.8);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
